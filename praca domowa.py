@@ -1,0 +1,1 @@
+# od 1 do 100; podzielne przez 3 -> Fizz; przez 5 -> Buzz; przez 5 i 3 -> FizzBuzz; ilość liczb podzielnych przez 3
