@@ -1,0 +1,29 @@
+c = "Python programming"
+print(len(c)) # liczba znaków (ze spacjami!)
+print(c[0]) # zwraca znak o indeksie 0
+print(c[0:5])
+print(c[-1]) # od końca
+print(c[:]) # maksymalna skrajność
+print(c[::2]) # wszystko od początku do końca, ale tylko co 2. znak
+print(c[3:])
+print(c[:3])
+
+# [x:y:z]
+# x - początek
+# y - koniec
+# z - krok
+
+a = "Julka"
+b = "Malinowska"
+
+print(3*a,b, end="---")
+print(3*a,b, end="---") # ctrl+d
+print(3*a,b, end="---") # ctrl+d
+print(a + " " + b)
+print(type(a)) # zwraca, jakiego typu jest dana zmienna
+print(f"wloaehfcu{a}oirbvgfdv") # f informuje, że string będzie później formatowany i to, że to w klamrach to zmienna
+
+#x = input("Podaj swój wiek: ")
+#print(int(x) + 3)
+james_bond = 7
+print(str(james_bond).zfill(3)) # do trzeciego znaku wypełnij zerami
