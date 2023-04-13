@@ -1,29 +1,63 @@
-c = "Python programming"
-print(len(c)) # liczba znaków (ze spacjami!)
-print(c[0]) # zwraca znak o indeksie 0
-print(c[0:5])
-print(c[-1]) # od końca
-print(c[:]) # maksymalna skrajność
-print(c[::2]) # wszystko od początku do końca, ale tylko co 2. znak
-print(c[3:])
-print(c[:3])
+a = "My jesteśmy krasnoludki, hopsasa, hopsasa"
+l = a.find("j")
+b = a[l:l+8]
+print("b ma wartość: " + b)
 
-# [x:y:z]
-# x - początek
-# y - koniec
-# z - krok
+c = a[-7:]
+print("zmienna c ma wartość: " + c)
 
-a = "Julka"
-b = "Malinowska"
+d = "my"
+e = "KRASNOLUDKI"
 
-print(3*a,b, end="---")
-print(3*a,b, end="---") # ctrl+d
-print(3*a,b, end="---") # ctrl+d
-print(a + " " + b)
-print(type(a)) # zwraca, jakiego typu jest dana zmienna
-print(f"wloaehfcu{a}oirbvgfdv") # f informuje, że string będzie później formatowany i to, że to w klamrach to zmienna
+e = e.lower()
+print(e)
 
-#x = input("Podaj swój wiek: ")
-#print(int(x) + 3)
-james_bond = 7
-print(str(james_bond).zfill(3)) # do trzeciego znaku wypełnij zerami
+d = d.capitalize()
+print(d)
+
+print(d + " " + b + " " + e + ", " + c + ", "+ c)
+
+
+I = "Rwdogrbnrimlnvsspponbnf"
+N = "gClkjrvrtudrusjfdoveseh"
+Wi = (I[::3])
+Wn = (N[1::4])
+print(Wi + " " + Wn)
+
+
+print("liczba liter s: " + str(a.count("s")))
+print("liczba liter a: " + str(a.count("a")))
+
+
+p = "Pxrxogxxrxamxoxwaxnixxexx xtxo xcxzexxscx ixnfxoxxrxxmxaxtxyxkxxixxx."
+p = p.replace("x", "")
+print(p)
+
+
+u = float(input("Podaj jakąś liczbę: "))
+o = float(input("Podaj drugą liczbę: "))
+S = u + o
+R = abs(u - o)
+P = u**3
+m = o**3
+r = o%u
+M = u%o
+print("Suma tych liczb wynosi: " + str(S))
+print("1. liczba minus 2. liczba to " + str(R))
+print("Potęga 1. liczby to: " + str(P))
+print("Potęga 2. liczby to: " + str(m))
+print("reszta z dzielenia 2. liczby przez 1. to: " + str(r))
+print("reszta z dzielenia 1. liczby przez 2. to: " + str(M))
+
+
+A = "\033[1;33;46m"
+B = "\033[1;30;41m"
+C = "\033[1;31;44m"
+re = "\033[0m"
+
+print(C + "Programowanie" + re, A + "jest" + re, B + "SUPER" + re)
+
+G = input("Podaj pojedynczą liczbę rzymską: ")
+g = input("Podaj drugą pojedynczą liczbę rzymską: ")
+
+if
