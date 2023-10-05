@@ -1,0 +1,46 @@
+for x in "Python":
+    print(x)
+
+b = True
+
+#while b == True:
+#   y = input("Podaj jakas liczbe: ")
+#  if y.lower() == "quit": b = False
+
+
+#while True:
+ #   z = input("Podaj liczbe:")
+  #  if z.lower() == "quit":
+   #     break
+    #else:
+     #   print(z)
+
+def greet():
+    print("Hi there!")
+
+def greeet(first_name, last_name):
+    print(f"Hi, ")
+
+def increment(number, by=4):
+    return number + by
+
+print(increment(2, by=5))
+
+def multiply(n, m):
+    return n * m
+
+multiply(2, 3)
+
+def multi(*numbers): # gwiazdka - w środku jest ileś rzeczy - numbers jest potraktowane jako ileś rzeczy
+    print(numbers)
+
+multi(2, 3, 4, 5) # - tuple
+
+#tuple to nieedytowalna lista
+
+def save_user(**user): # klucz zmiennych-wartość (słownik)
+    print(user)
+
+save_user(id=1, name="John", age = 22)
+
+# global - 
