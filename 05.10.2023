@@ -44,3 +44,28 @@ def save_user(**user): # klucz zmiennych-wartość (słownik)
 save_user(id=1, name="John", age = 22)
 
 # global - 
+
+
+
+
+
+
+
+
+
+
+
+uczniowie = []
+oceny = []
+
+def dodaj_ocene(uczen, ocena):
+    uczniowie.append(uczen)
+    oceny.append(ocena)
+
+def usun_ocene(uczen, ocena):
+    return True
+
+dodaj_ocene("Jan", 5)
+dodaj_ocene("Maria", 1)
+print(uczniowie)
+print(oceny)
