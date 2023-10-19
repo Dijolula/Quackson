@@ -1,0 +1,92 @@
+# 100 słów; długość od 1-10; składające się z ciągu liter A i B
+#randint() - gives random number between the given range
+import random
+
+
+def funkcja():
+    r = random.randint(1,10)
+
+#rozwiązanie 1.:
+
+bigword = ""
+
+for raint in range(0, 100):
+    ran = random.randint(0,1)
+    ranlen = random.randint(1,10)
+    if ran == 0:
+        for a in range(1, ranlen):
+            bigword += "A" #dodajemy tyle razy "A", ile wylosowano
+    else:
+        for a2 in range(ranlen):
+            bigword += "B"
+
+print(bigword)
+
+
+#rozwiązanie 2.:
+
+string = ""
+for n in range(100):
+    l = random.randint(1,2)
+    if l == 1:
+        r = random. randint(1,10)
+        string += r * "A"
+    else:
+        r = random.randint(1,10)
+        string = string + r * "B"
+print(string)
+
+
+#rozwiązanie 3.:
+
+from random import randint
+
+word = ""
+a = 0
+while a < 100:
+    ran_num = randint(1,10)
+    ran_lit = randint(0,1)
+    if ran_lit == 0:
+        word += "A" * ran_num
+    else:
+        word += "B" * ran_num
+    a += 1
+print(word)
+
+A_rem = 0
+A = 0
+B = 0
+B_rem = 0
+x_l = 0
+
+bigword = "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBAAAAAABBBBBBBBBBBBAAAABBBBBBBBBBAAAAAAAAABBBBBBBBBBBBAAAAAAAABBBAABBBBBBBBAAAAAAAAAAAAAAAAAABBBBBBBAAAAAAAAAABBBBBBBBBBBAAAAABBBBBBBBBBBBBBBAAAAAAAAAABBBAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAAAAAAAAAABBBBBBBAAAAAAAAABBBBBAAAAAAAAAAAAAAAAABBBBBBAAAABBBBAAAABBBBBBBBAAAAAAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBABBBBBBBBBAAAAAAAAAABBBBBAAAAAABBBBBBBBBAAAAAAAAABBBBBBBBBBBBBBBBBBAAABBBBBBBBBBBBBBBBBAAAAAAAAAAAAAAABBBBBBBBBBAAAAAAAAAAAAAABBAAAAAAAAAAABBBB"
+
+for x in bigword:
+    x_l += 1
+    if x == "A":
+        B = 0
+        A += 1
+        if A_rem < A:
+            A_rem = A
+            A_x = x_l
+    elif x == "B":
+        A = 0
+        B += 1
+        if B_rem < B:
+            B_rem = B
+            B_x = x_l
+
+Bl = B_x - B_rem + 1
+Al = A_x - A_rem + 1
+print("Najdluzszy ciag liter A to", A_rem, "zaczynajac sie na", Al, "konczac sie na", A_x)
+print("Najdluzszy ciag liter B to", B_rem, "zaczynajac sie na", Bl, "konczac sie na", B_x)
+
+# literka = random.choice(["A", "B"])
+
+wodr = ""
+for c in range(1,100):
+    długość = random.randint(0,10)
+    for f in range(długość):
+        litrka = random.choice(["A", "B"])
+        wodr += litrka
+print(wodr)
