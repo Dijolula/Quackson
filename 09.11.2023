@@ -1,0 +1,24 @@
+#import requests
+
+#x = requests.get('https://w3schools.com/python/demopage.htm')
+
+#print(x.text)
+
+print("Witaj.")
+print("Zaczynasz swoja gre w wisielca. Masz 16 prob. Powodzenia!")
+s = "heathers"
+S = ""
+for l in s:
+    S += "."
+for x in range(16):
+    if S != s:
+        n = input("Podaj literę: ")
+        if n.lower() in s: # jesli podana litera (n) znajduje sie w slowie (s)
+            z = 0
+            for k in s: # dla biezacej litery (k) w slowie (s)
+                 if n == k: # jesli podana litera (n) rowna sie biezacej literze slowa s (k)
+                    S = S[:z] + n + S[z+1:]
+                 z += 1
+        if S == s: print("Jej! Wygrales! *Unimpressed*")
+        elif x != 15: print(S)
+        if x == 15: print("Woooops! Przegrales! Hopeless!") # jak skoncza Ci sie ruchy
